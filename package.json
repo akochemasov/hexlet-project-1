@@ -1,0 +1,31 @@
+{
+  "name": "sovik-brain-games",
+  "version": "1.0.1",
+  "description": "",
+  "main": "index.js",
+  "bin": {
+    "brain-games": "dist/bin/brain-games.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "babel-node": "babel-node",
+    "build": "NODE_ENV=production babel src --out-dir dist --source-maps inline",
+    "prepublish": "npm run build"    
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/akochemasov/project-lvl1-s132.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/akochemasov/project-lvl1-s132/issues"
+  },
+  "homepage": "https://github.com/akochemasov/project-lvl1-s132#readme",
+  "devDependencies": {
+    "babel-cli": "*",
+    "babel-core": "*",
+    "babel-preset-env": "*",
+    "babel-preset-stage-0": "*"
+  }
+}
