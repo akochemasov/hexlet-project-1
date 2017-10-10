@@ -1,6 +1,6 @@
 {
   "name": "sovik-brain-games",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "Brain games. Npm package.",
   "main": "index.js",
   "bin": {
@@ -10,7 +10,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "babel-node": "babel-node",
     "build": "NODE_ENV=production babel src --out-dir dist --source-maps inline",
-    "prepublish": "npm run build"
+    "prepublish": "npm run build",
+    "eslint": "eslint src"
   },
   "repository": {
     "type": "git",
@@ -26,7 +27,11 @@
     "babel-cli": "latest",
     "babel-core": "latest",
     "babel-preset-env": "latest",
-    "babel-preset-stage-0": "latest"
+    "babel-preset-stage-0": "latest",
+    "eslint": "latest", 
+    "eslint-config-airbnb-base": "latest", 
+    "eslint-plugin-import": "latest", 
+    "babel-eslint": "latest"
   },
   "dependencies": {
     "readline-sync": "latest"
