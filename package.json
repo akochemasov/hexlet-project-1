@@ -1,6 +1,6 @@
 {
   "name": "sovik-brain-games",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Brain games. Npm package.",
   "main": "index.js",
   "bin": {
@@ -23,10 +23,12 @@
   },
   "homepage": "https://github.com/akochemasov/project-lvl1-s132#readme",
   "devDependencies": {
-    "babel-cli": "*",
-    "babel-core": "*",
-    "babel-preset-env": "*",
-    "babel-preset-stage-0": "*",
-    "readline-sync": "^1.4.7"
+    "babel-cli": "latest",
+    "babel-core": "latest",
+    "babel-preset-env": "latest",
+    "babel-preset-stage-0": "latest"
+  },
+  "dependencies": {
+    "readline-sync": "latest"
   }
 }
