@@ -1,4 +1,4 @@
 #!/usr/bin/env node
-import getUserName from '..';
+import { getUserNameForGame } from '..';
 
-getUserName();
+getUserNameForGame();
