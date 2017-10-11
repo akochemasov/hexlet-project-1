@@ -2,7 +2,7 @@
   "name": "sovik-brain-games",
   "version": "1.3.1",
   "description": "Brain games. Npm package.",
-  "main": "index.js",
+  "main": "dist/index.js",
   "bin": {
     "brain-games": "dist/bin/brain-games.js",
     "brain-even": "dist/bin/brain-even.js"
@@ -18,23 +18,23 @@
     "type": "git",
     "url": "git+https://github.com/akochemasov/project-lvl1-s132.git"
   },
-  "author": "",
+  "author": "Alexander Kochemasov",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/akochemasov/project-lvl1-s132/issues"
   },
   "homepage": "https://github.com/akochemasov/project-lvl1-s132#readme",
   "devDependencies": {
-    "babel-cli": "latest",
-    "babel-core": "latest",
-    "babel-preset-env": "latest",
-    "babel-preset-stage-0": "latest",
-    "eslint": "latest", 
-    "eslint-config-airbnb-base": "latest", 
-    "eslint-plugin-import": "latest", 
-    "babel-eslint": "latest"
+    "babel-cli": "~6.26.0",
+    "babel-core": "~6.26.0",
+    "babel-preset-env": "~1.6.0",
+    "babel-preset-stage-0": "~6.24.1",
+    "eslint": "~4.8.0",
+    "eslint-config-airbnb-base": "~12.0.2",
+    "eslint-plugin-import": "~2.7.0",
+    "babel-eslint": "~8.0.1"
   },
   "dependencies": {
-    "readline-sync": "latest"
+    "readline-sync": "~1.4.7"
   }
 }
