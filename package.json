@@ -1,8 +1,8 @@
 {
   "name": "sovik-brain-games",
-  "version": "1.3.2",
+  "version": "1.3.3",
   "description": "Brain games. Npm package.",
-  "main": "dist/index.js",
+  "main": "",
   "bin": {
     "brain-games": "dist/bin/brain-games.js",
     "brain-even": "dist/bin/brain-even.js"
