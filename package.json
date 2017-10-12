@@ -1,6 +1,6 @@
 {
   "name": "sovik-brain-games",
-  "version": "1.5.2",
+  "version": "1.5.4",
   "description": "Brain games. Npm package.",
   "main": "",
   "bin": {
