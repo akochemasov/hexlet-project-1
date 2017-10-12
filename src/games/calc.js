@@ -25,10 +25,14 @@ const getAnswer = (question) => {
 
 const getAnswerCorrect = question => String(getAnswer(question));
 
-const generateTask = () => [getQuestion, getAnswerCorrect, desc];
+const generateTask = () => {
+  const question = getQuestion();
+  const answerCorrect = getAnswerCorrect(question);
+  return [question, answerCorrect];
+};
 
 const game = () => {
-  init(generateTask);
+  init(generateTask, desc);
 };
 
 export default game;

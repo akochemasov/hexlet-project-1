@@ -2,9 +2,7 @@ import readlineSync from 'readline-sync';
 
 const answerCorrectLimit = 3;
 
-const init = (generateTask) => {
-  const [getQuestion, getAnswerCorrect, desc] = generateTask();
-
+const init = (generateTask, desc) => {
   console.log('Welcome to the Brain Games!');
   console.log(desc);
   console.log('');
@@ -16,10 +14,9 @@ const init = (generateTask) => {
       console.log(`Congratulations, ${userName}!`);
       return;
     }
-    const question = getQuestion();
+    const [question, answerCorrect] = generateTask();
     console.log(`Question: ${question}`);
     const answerUser = readlineSync.question('Your answer: ');
-    const answerCorrect = getAnswerCorrect(question);
     if (answerUser === answerCorrect) {
       console.log('Correct!');
       iter(acc + 1);
