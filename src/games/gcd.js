@@ -1,5 +1,7 @@
 import init from '..';
 
+const desc = 'Find the greatest common divisor of given numbers.';
+
 const getRndInteger = () => Math.floor(Math.random() * 20) + 1;
 const getQuestion = () => `${getRndInteger()} ${getRndInteger()}`;
 
@@ -16,10 +18,10 @@ const getAnswer = (question) => {
 
 const getAnswerCorrect = question => String(getAnswer(question));
 
+const generateTask = () => [getQuestion, getAnswerCorrect, desc];
+
 const brainGcd = () => {
-  console.log('Welcome to the Brain Games!');
-  console.log('Find the greatest common divisor of given numbers.');
-  init(getQuestion, getAnswerCorrect);
+  init(generateTask);
 };
 
 export default brainGcd;
