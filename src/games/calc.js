@@ -22,7 +22,6 @@ const getAnswer = (question) => {
       return num1 + num2;
   }
 };
-
 const getAnswerCorrect = question => String(getAnswer(question));
 
 const generateTask = () => {

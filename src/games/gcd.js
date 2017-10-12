@@ -15,7 +15,6 @@ const getAnswer = (question) => {
   const [a, b] = question.split(' ');
   return getNod(Number(a), Number(b));
 };
-
 const getAnswerCorrect = question => String(getAnswer(question));
 
 const generateTask = () => {

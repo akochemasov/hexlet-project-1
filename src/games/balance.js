@@ -18,7 +18,6 @@ const getAnswer = (question) => {
   }
   return getAnswer([min + diff, max - diff, arr.slice(1, arr.length - 1)].join(''));
 };
-
 const getAnswerCorrect = question => String(getAnswer(question));
 
 const generateTask = () => {
