@@ -2,6 +2,9 @@ install:
 	npm install
 
 start:
+	npm run babel-node -- src/bin/brain-balance.js
+
+startGcd:
 	npm run babel-node -- src/bin/brain-gcd.js
 
 startCalc:
