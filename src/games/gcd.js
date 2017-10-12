@@ -20,8 +20,8 @@ const getAnswerCorrect = question => String(getAnswer(question));
 
 const generateTask = () => [getQuestion, getAnswerCorrect, desc];
 
-const brainGcd = () => {
+const game = () => {
   init(generateTask);
 };
 
-export default brainGcd;
+export default game;

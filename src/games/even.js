@@ -7,10 +7,10 @@ const isEven = num => num % 2 === 0;
 
 const getAnswerCorrect = question => (isEven(question) ? 'yes' : 'no');
 
-const brainEven = () => {
+const game = () => {
   console.log('Welcome to the Brain Games!');
   console.log('Answer "yes" if number even otherwise answer "no".');
   init(getQuestion, getAnswerCorrect);
 };
 
-export default brainEven;
+export default game;
