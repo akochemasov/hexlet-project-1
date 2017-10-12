@@ -1,5 +1,6 @@
 import init from '..';
 
+const desc = 'What is the result of the expression?';
 const operations = ['+', '-', '*'];
 
 const getRndInteger = () => Math.floor(Math.random() * 5) + 1;
@@ -18,16 +19,16 @@ const getAnswer = (question) => {
     case '*':
       return num1 * num2;
     default:
-      return undefined;
+      return num1 + num2;
   }
 };
 
 const getAnswerCorrect = question => String(getAnswer(question));
 
-const brainEven = () => {
-  console.log('Welcome to the Brain Games!');
-  console.log('What is the result of the expression?');
-  init(getQuestion, getAnswerCorrect);
+const generateTask = () => [getQuestion, getAnswerCorrect, desc];
+
+const brainCalc = () => {
+  init(generateTask);
 };
 
-export default brainEven;
+export default brainCalc;
