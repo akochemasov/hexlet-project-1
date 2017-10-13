@@ -2,7 +2,10 @@ install:
 	npm install
 
 start:
-	npm run babel-node -- src/bin/brain-balance.js
+	npm run babel-node -- src/bin/brain-progression.js
+
+startProgression:
+	npm run babel-node -- src/bin/brain-progression.js
 
 startBalance:
 	npm run babel-node -- src/bin/brain-balance.js
