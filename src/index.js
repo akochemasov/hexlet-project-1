@@ -1,16 +1,16 @@
 import readlineSync from 'readline-sync';
 
-const answerCorrectLimit = 3;
+const gamesCount = 3;
 
-const init = (generateTask, desc) => {
+const initGame = (generateTask, descGame) => {
   console.log('Welcome to the Brain Games!');
-  console.log(desc);
+  console.log(descGame);
   console.log('');
   const userName = readlineSync.question('May I have your name? ');
   console.log(`Hello ${userName}!`);
   console.log('');
   const iter = (acc) => {
-    if (acc === answerCorrectLimit) {
+    if (acc === gamesCount) {
       console.log(`Congratulations, ${userName}!`);
       return;
     }
@@ -28,4 +28,4 @@ const init = (generateTask, desc) => {
   iter(0);
 };
 
-export default init;
+export default initGame;
