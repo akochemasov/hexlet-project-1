@@ -2,7 +2,10 @@ install:
 	npm install
 
 start:
-	npm run babel-node -- src/bin/brain-progression.js
+	npm run babel-node -- src/bin/brain-prime.js
+
+startPrime:
+	npm run babel-node -- src/bin/brain-prime.js
 
 startProgression:
 	npm run babel-node -- src/bin/brain-progression.js
