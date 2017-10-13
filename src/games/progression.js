@@ -1,8 +1,8 @@
 import initGame from '..';
 import { getRndInteger } from '../utils';
 
-const descGame = 'What number is missing in this progression?';
-let answerCorrect = 0;
+const description = 'What number is missing in this progression?';
+let correctAnswer = '';
 
 const getQuestion = () => {
   const lenRow = 10;
@@ -10,26 +10,26 @@ const getQuestion = () => {
   const stepRow = getRndInteger(10);
   const rndInRow = getRndInteger(lenRow);
 
-  let question = '';
-  for (let i = 0; i < lenRow; i += 1) {
-    const item = startRow + (i * stepRow);
-    let res = String(item);
-    if (i === rndInRow) {
-      answerCorrect = item;
-      res = '..';
+  const iter = (count, acc) => {
+    if (count === lenRow) {
+      return acc;
     }
-    question = (i === 0) ? `${res}` : `${question} ${res}`;
-  }
-
-  return question;
+    const item = startRow + (count * stepRow);
+    if (count === rndInRow) {
+      correctAnswer = item;
+      return iter(count + 1, `${acc} ..`);
+    }
+    return iter(count + 1, `${acc} ${item}`);
+  };
+  return iter(0, '');
 };
 
-const getAnswerCorrect = () => answerCorrect;
+const getCorrectAnswer = () => correctAnswer;
 
-const generateTask = () => [getQuestion(), String(getAnswerCorrect())];
+const generateTask = () => [getQuestion(), String(getCorrectAnswer())];
 
 const game = () => {
-  initGame(generateTask, descGame);
+  initGame(generateTask, description);
 };
 
 export default game;

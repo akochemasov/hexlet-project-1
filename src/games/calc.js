@@ -1,12 +1,12 @@
 import initGame from '..';
 import { getRndInteger } from '../utils';
 
-const descGame = 'What is the result of the expression?';
+const description = 'What is the result of the expression?';
 const operations = ['+', '-', '*'];
 
 const getQuestion = () => `${getRndInteger(10)} ${operations[getRndInteger(operations.length)]} ${getRndInteger(10)}`;
 
-const getAnswerCorrect = (question) => {
+const getCorrectAnswer = (question) => {
   const [a, operation, b] = question.split(' ');
   const num1 = Number(a);
   const num2 = Number(b);
@@ -24,12 +24,12 @@ const getAnswerCorrect = (question) => {
 
 const generateTask = () => {
   const question = getQuestion();
-  const answerCorrect = String(getAnswerCorrect(question));
-  return [question, answerCorrect];
+  const correctAnswer = String(getCorrectAnswer(question));
+  return [question, correctAnswer];
 };
 
 const game = () => {
-  initGame(generateTask, descGame);
+  initGame(generateTask, description);
 };
 
 export default game;

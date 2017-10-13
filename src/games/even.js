@@ -1,21 +1,21 @@
 import initGame from '..';
 import { getRndInteger } from '../utils';
 
-const descGame = 'Answer "yes" if number even otherwise answer "no".';
+const description = 'Answer "yes" if number even otherwise answer "no".';
 
 const getQuestion = () => getRndInteger(100);
 
 const isEven = num => num % 2 === 0;
-const getAnswerCorrect = question => (isEven(question) ? 'yes' : 'no');
+const getCorrectAnswer = question => (isEven(question) ? 'yes' : 'no');
 
 const generateTask = () => {
   const question = getQuestion();
-  const answerCorrect = getAnswerCorrect(question);
-  return [question, answerCorrect];
+  const correctAnswer = getCorrectAnswer(question);
+  return [question, correctAnswer];
 };
 
 const game = () => {
-  initGame(generateTask, descGame);
+  initGame(generateTask, description);
 };
 
 export default game;

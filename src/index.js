@@ -14,14 +14,14 @@ const initGame = (generateTask, descGame) => {
       console.log(`Congratulations, ${userName}!`);
       return;
     }
-    const [question, answerCorrect] = generateTask();
+    const [question, correctAnswer] = generateTask();
     console.log(`Question: ${question}`);
     const answerUser = readlineSync.question('Your answer: ');
-    if (answerUser === answerCorrect) {
+    if (answerUser === correctAnswer) {
       console.log('Correct!');
       iter(acc + 1);
     } else {
-      console.log(`"${answerUser}" is wrong answer ;(. Correct answer was "${answerCorrect}".
+      console.log(`"${answerUser}" is wrong answer ;(. Correct answer was "${correctAnswer}".
       Let's try again, ${userName}!`);
     }
   };
