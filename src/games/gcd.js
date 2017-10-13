@@ -1,9 +1,9 @@
-import init from '..';
+import initGame from '..';
+import { getRndInteger } from '../utils';
 
-const desc = 'Find the greatest common divisor of given numbers.';
+const descGame = 'Find the greatest common divisor of given numbers.';
 
-const getRndInteger = () => Math.floor(Math.random() * 20) + 1;
-const getQuestion = () => `${getRndInteger()} ${getRndInteger()}`;
+const getQuestion = () => `${getRndInteger(20)} ${getRndInteger(20)}`;
 
 const getNod = (a, b) => {
   if (b === 0) {
@@ -11,20 +11,19 @@ const getNod = (a, b) => {
   }
   return getNod(b, a % b);
 };
-const getAnswer = (question) => {
+const getAnswerCorrect = (question) => {
   const [a, b] = question.split(' ');
   return getNod(Number(a), Number(b));
 };
-const getAnswerCorrect = question => String(getAnswer(question));
 
 const generateTask = () => {
   const question = getQuestion();
-  const answerCorrect = getAnswerCorrect(question);
+  const answerCorrect = String(getAnswerCorrect(question));
   return [question, answerCorrect];
 };
 
 const game = () => {
-  init(generateTask, desc);
+  initGame(generateTask, descGame);
 };
 
 export default game;
