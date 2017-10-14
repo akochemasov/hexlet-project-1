@@ -3,8 +3,6 @@ import { getRndInteger } from '../utils';
 
 const description = 'Find the greatest common divisor of given numbers.';
 
-const getQuestion = () => `${getRndInteger(20)} ${getRndInteger(20)}`;
-
 const getNod = (a, b) => {
   if (b === 0) {
     return a;
@@ -17,7 +15,7 @@ const getCorrectAnswer = (question) => {
 };
 
 const generateTask = () => {
-  const question = getQuestion();
+  const question = `${getRndInteger(20)} ${getRndInteger(20)}`;
   const correctAnswer = String(getCorrectAnswer(question));
   return [question, correctAnswer];
 };

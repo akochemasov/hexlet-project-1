@@ -3,8 +3,6 @@ import { getRndInteger } from '../utils';
 
 const description = 'Answer "yes" if number prime otherwise answer "no".';
 
-const getQuestion = () => `${getRndInteger(100)}`;
-
 const isPrime = (num) => {
   if (num < 2) {
     return false;
@@ -25,7 +23,7 @@ const isPrime = (num) => {
 const getCorrectAnswer = question => (isPrime(Number(question)) ? 'yes' : 'no');
 
 const generateTask = () => {
-  const question = getQuestion();
+  const question = `${getRndInteger(100)}`;
   const correctAnswer = String(getCorrectAnswer(question));
   return [question, correctAnswer];
 };

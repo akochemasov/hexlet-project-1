@@ -24,9 +24,7 @@ const getQuestion = () => {
   return iter(0, '');
 };
 
-const getCorrectAnswer = () => correctAnswer;
-
-const generateTask = () => [getQuestion(), String(getCorrectAnswer())];
+const generateTask = () => [getQuestion(), String(correctAnswer)];
 
 const game = () => {
   initGame(generateTask, description);
