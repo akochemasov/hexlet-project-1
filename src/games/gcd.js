@@ -16,8 +16,8 @@ const getCorrectAnswer = (question) => {
 
 const generateTask = () => {
   const question = `${getRndInteger(20)} ${getRndInteger(20)}`;
-  const correctAnswer = String(getCorrectAnswer(question));
-  return [question, correctAnswer];
+  const correctAnswer = getCorrectAnswer(question);
+  return [question, String(correctAnswer)];
 };
 
 const game = () => {
