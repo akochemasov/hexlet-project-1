@@ -22,8 +22,8 @@ const getCorrectAnswer = (question) => {
 
 const generateTask = () => {
   const question = `${getRndInteger(10)} ${operations[getRndInteger(operations.length)]} ${getRndInteger(10)}`;
-  const correctAnswer = String(getCorrectAnswer(question));
-  return [question, correctAnswer];
+  const correctAnswer = getCorrectAnswer(question);
+  return [question, String(correctAnswer)];
 };
 
 const game = () => {
