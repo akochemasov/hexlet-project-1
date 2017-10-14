@@ -3,8 +3,6 @@ import { getRndInteger } from '../utils';
 
 const description = 'Balance the given number.';
 
-const getQuestion = () => `${getRndInteger(100)}`;
-
 const getCorrectAnswer = (question) => {
   const arr = question.split('').sort();
   const min = Number(arr[0]);
@@ -20,7 +18,7 @@ const getCorrectAnswer = (question) => {
 };
 
 const generateTask = () => {
-  const question = getQuestion();
+  const question = `${getRndInteger(100)}`;
   const correctAnswer = String(getCorrectAnswer(question));
   return [question, correctAnswer];
 };

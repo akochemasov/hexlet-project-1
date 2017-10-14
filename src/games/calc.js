@@ -4,8 +4,6 @@ import { getRndInteger } from '../utils';
 const description = 'What is the result of the expression?';
 const operations = ['+', '-', '*'];
 
-const getQuestion = () => `${getRndInteger(10)} ${operations[getRndInteger(operations.length)]} ${getRndInteger(10)}`;
-
 const getCorrectAnswer = (question) => {
   const [a, operation, b] = question.split(' ');
   const num1 = Number(a);
@@ -23,7 +21,7 @@ const getCorrectAnswer = (question) => {
 };
 
 const generateTask = () => {
-  const question = getQuestion();
+  const question = `${getRndInteger(10)} ${operations[getRndInteger(operations.length)]} ${getRndInteger(10)}`;
   const correctAnswer = String(getCorrectAnswer(question));
   return [question, correctAnswer];
 };
